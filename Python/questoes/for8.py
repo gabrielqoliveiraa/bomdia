@@ -16,10 +16,10 @@ for c in range(1, 4):
         hMax = nome
         idade = hiiMax
     else:
-        if idade > hiiMax:
+        if idade > hiiMax and sexo in 'Mm':
             nome = hMax
             idade = hiiMax
-    if idade < 18 and sexo == 'F':
+    if idade < 18 and sexo in 'Ff':
         countMulher += 1
 
 
