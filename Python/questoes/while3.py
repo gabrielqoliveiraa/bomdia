@@ -8,11 +8,10 @@ while jogada != 5:
     jogada = int(input('Digite sua jogada: '))
     if jogada == 1:
         a = valor1 + valor2
-        print(a)
-        StopIteration
+        print('A soma dos valores são: {}'.format(a))
     elif jogada == 2:
         a = valor1*valor2
-        print(a)
+        print('A multiplicação dos valores são {}'.format(a))
     elif jogada == 3:
         if valor1 > valor2:
             maiorValor = valor1
