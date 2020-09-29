@@ -1,16 +1,23 @@
-razao = int(input('Digite a razão da PA: '))
-ftermo = int(input('Digite o primeiro termo: '))
-count = 0 
-n = 1
+ptermo = int(input('Digite o primeiro termo: '))
+razao = int(input('Digite a razao: '))
+count = 0
+quantidadeTermos = 10
 
-while count <= 9:
+while count <= quantidadeTermos:
+    ptermo += razao
     count += 1
-    termo = ftermo + ((n-1)*razao)
-    n += 1
-    print(termo, end=' -> ')
-    
+    print(ptermo, end=' ')
+    if count == quantidadeTermos:
+        escolha = int(input('\n Quantos termos você quer a mais ? '))
+        quantidadeTermos = escolha + count
+        if escolha == 0:
+            exit()
 print('FIM')
-            
+
+
+    
+
+    
 
 
 
