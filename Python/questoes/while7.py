@@ -9,9 +9,10 @@ print(termo1, termo2, end=' -> ')
 
 while count <= a:
     termo3 = termo1 + termo2
-    print(termo3, end=' ')
+    print(termo3, end=' -> ')
     termo1 = termo2
     termo2 = termo3
+    count += 1
 
 print('FIM')
     
