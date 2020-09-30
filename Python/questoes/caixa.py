@@ -4,7 +4,7 @@ count = 0
 total = valor
 
 while True:
-    if total > ced:
+    if total >= ced:
         total = total - ced
         count += 1
     else:
@@ -15,7 +15,7 @@ while True:
             ced = 10
         elif ced == 10:
             ced = 1
-        elif total == 0:
+        if total == 0:
             break
             
 
