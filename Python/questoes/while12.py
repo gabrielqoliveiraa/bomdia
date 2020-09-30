@@ -1,7 +1,7 @@
 from random import randint
 n = soma = count = 0
-lista = randint(1, 2)
 while True:
+    lista = randint(1, 10)
     n = int(input('Digite um numero: '))
     escolha = str(input('Par ou Impar ? I/P: ')).upper().strip()[0]
     soma = n + lista
