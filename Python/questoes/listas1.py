@@ -1,32 +1,27 @@
-lista1 = list()
-valorMaior = valorMenor = 0
+numeros = []
+maior = menor = 0
 
-for v in range(0,5):
-    lista1.append(int(input('Digite um valor: ')))
-    if v == 0:
-        valorMaior = valorMenor = lista1[v]
+for c in range(0,5):
+    numeros.append(int(input('Digite um número: ')))
+    if c == 0:
+     maior = menor = numeros[c]
     else:
-        if lista1[v] > valorMaior:
-            valorMaior = lista1[v]
-        else:
-            valorMenor = lista1[v]
+        if numeros[c] > maior:
+            maior = numeros[c]
+        if numeros[c] < menor:
+            menor = numeros[c]
+
+print('Você digitou os números: ', numeros)
 
 
-print(f'A lista é {lista1}')
-print(f'O maior valor é {valorMaior} na posição', end=' ')
-
-for c, a in enumerate(lista1):
-    if a == valorMaior:
-        print(f'{c}')
-
-print(f'O menor valor é {valorMenor} na posição', end=' ')
-    
-for c, a in enumerate(lista1):
-    if a == valorMenor:
-        print(f'{c}', end=' ')
-
-        
+for c, v in enumerate(numeros):
+    if v == maior:
+     print (f'O maior número é {maior} e sua posição é {c}') 
+    if v == menor:
+        print (f'O menor número é {menor} e sua posição é {c}')
 
 
-        
-   
+print(maior)
+print(menor)
+
+
