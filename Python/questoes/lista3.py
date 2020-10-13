@@ -1,8 +1,15 @@
 numeros = list()
 
 for c in range(0,5):
-    numeros.append(int(input('Digite um numero: ')))
-    if numeros[c] > numeros[c-1]:
-        numeros[c] = numeros[c+1]
+    u = int(input('Digite um numero: '))
+    if c == 0 or u > numeros[-1]:
+        numeros.append(u)
+    else:
+        quarry = 0
+        while quarry < len(numeros):
+            if u <= numeros[quarry]:
+                numeros.insert(quarry, u)
+                quarry += 1
+                break
 
 print(numeros)
