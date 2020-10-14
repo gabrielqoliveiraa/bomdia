@@ -9,7 +9,7 @@ for c in range(0,5):
         if numeros[c] > maior:
             maior = numeros[c]
         if numeros[c] < menor:
-            menor = numeros[c]
+            menor = numeros[c]          
 
 print('Você digitou os números: ', numeros)
 
