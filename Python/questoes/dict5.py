@@ -11,7 +11,7 @@ while True:
         sexo = str(input('Sexo: ')).upper().strip()[0]
     dict_usuario['sexo'] = sexo
     dict_usuario['idade'] = int(input('Idade: '))
-    cadastro.append(dict_usuario)
+    cadastro.append(dict_usuario.copy())
     usuario = str(input('Continuar ? S/N: ')).upper().strip()[0]
     idade = (idade + dict_usuario['idade']) 
     while usuario not in 'SN':
