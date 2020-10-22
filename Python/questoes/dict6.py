@@ -36,4 +36,15 @@ for c,v in enumerate(cadastrogeral):
     print()
 
 
-        
+while True:
+    busca = int(input('Qual jogador você quer ver os dados ? 999 PARA'))
+    if busca == 999:
+        break
+    if busca >= len(cadastrogeral):
+        print(f'ERRO!')
+    else:
+        print(f'LEVANTAMENTO DO JOGADOR {cadastrogeral[busca]["nome"]}')
+        for i, g in enumerate(cadastrogeral[busca]["gols"]):
+            print(f'No jogo {i} fez {g} gols.')
+
+
