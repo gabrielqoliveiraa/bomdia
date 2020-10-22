@@ -1,29 +1,39 @@
-geral = {}
-aproveitamento = list()
-geral['nome'] = str(input('Nome jogador: '))
-partidas = int(input(f'Quantas partidas {geral["nome"]} jogou ?'))
-count = 0
+cadastrogeral = []
+cadastroindiv = {}
+listagols = []
+listatemp = []
 total = 0 
-while count < partidas:
-    gols_games = (int(input(f'Quantos gols na partida {count}?')))
-    aproveitamento.append(gols_games)
-    total = total + gols_games
-    count +=1
-geral['gols'] = aproveitamento[:]
-geral['total'] = total
-print('-='*30)
-print(geral)
-print('-='*30)
-for k,v in geral.items():
-    print(f'o campo {k} tem o valor {v}.')
-print('-='*30)
-print(f'O jogador {geral["nome"]} jogou {count} partidas')
-i = 0
-count2 = 0
-for c in aproveitamento:
-    print(f' {"=>":>5} Na partida {count2+1}, fez {geral["gols"][i]}')
-    i +=1
-    count2 +=1
+
+while True:
+    cadastroindiv['nome'] = str(input('Nome: '))
+    cadastroindiv['partidas'] = int(input('Partidas: '))
+    for c in range(0, cadastroindiv['partidas']):
+        gols = int(input(f'Quantos gols na partida {c} ?'))
+        listatemp.append(gols)
+        listagols.append(listatemp[:])
+    cadastroindiv['gols'] = listatemp[:]
+    cadastroindiv['total'] = sum(listatemp)
+    listatemp.clear()
+    cadastrogeral.append(cadastroindiv.copy())
+    usuario = str(input('Deseja Continuar ? S/N: ')).upper().strip()[0]
+    while usuario not in 'SN':
+        usuario = str(input('Deseja Continuar ? S/N: ')).upper().strip()[0]
+    if usuario == 'N':
+        break
 
 
+print(cadastrogeral)
+print('-='*30)
+print(f'cod', end=' ')
+for i in cadastroindiv.keys():
+    print(f'{i:<15}', end='')
+print()
 
+for c,v in enumerate(cadastrogeral):
+    print(f'{c:>3}', end=' ')
+    for d in v.values():
+        print(f'{str(d):<15}', end='')
+    print()
+
+
+        
