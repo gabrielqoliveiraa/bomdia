@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #area{
+            font: 25pt Arial;
+            background-color: green;
+            width: 500px;
+            height: 500px;
+            line-height: 500px;
+            text-align: center;
+            color: white;
+        }
+            
+
+
+
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseout="saiu()" onmouseenter="entrou()">
+
+        Interaja
+
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area')
+        /*a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        
+        MESMA FUNÇÃO DE DECLARAR O MÉTODO NO HTML
+        */
+
+        function clicar() {
+            a.innerText = 'CLICOU!'
+            a.style.background = 'red'
+        }
+
+        function saiu(){
+            a.innerText = 'SAIU!'
+            a.style.background = 'green'
+        }
+
+        function entrou(){
+            a.innerText = 'ENTROU!'
+        }
+           
+            
+
+
+
+    </script>
+</body>
+</html>
