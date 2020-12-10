@@ -1,1 +1,5 @@
-console.log('Tudo Bem ? ')
+var c = 1
+while (c <= 10) {
+    console.log(`${c} vezes`)
+    c++
+}
