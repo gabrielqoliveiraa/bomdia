@@ -4,3 +4,6 @@ formatarValor = (valorDecimal) => {
 }
 
 console.log(formatarValor(0.1 + 0.2))
+
+
+
