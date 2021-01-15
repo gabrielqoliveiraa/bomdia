@@ -4,16 +4,5 @@
 
 ## **Esse é meu GitHub**
 ***
-
-# _E esse é um teste de markdown_
-
-# Teste de Commit com Linux 
-
-* Teste
- * Teste
-    * Teste
-
-1. Teste
-1. Teste
-1. Teste
-    1. Teste
+## Esse é um repositório para estudos 
+ - Responder questões para consolidação de algumas linguagem ou tecnologia
