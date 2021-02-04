@@ -1,0 +1,55 @@
+<h1>Lista Aninhada</h1>
+
+<ul class='tree'>
+    <li>
+        <a href='javaScript:abreFecha("backendList")'>BackEnd - </a>
+        <ul id='backendList'>
+            <li>
+                <a href='javaScript:abreFecha("listBackend")'>App</a>
+                <ul id='listBackend'>
+                    <li>produto.js</li>
+                    <li>usuario.js</li>
+                    <li>venda.js</li>
+                </ul>
+            </li>
+            <li>
+                <a href='javaScript:abreFecha("listconfig")'>Config</a>
+                <ul id='listconfig'>
+                    <li>config.js</li>
+                    <li>usuario.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <a href='javaScript:abreFecha("frontendList")'>FrontEnd - </a>
+        <ul id ='frontendList'>
+            <li>
+                <a href='javaScript:abreFecha("listfrontend")'>Public - </a>
+                <ul id ='listfrontend'>
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+
+    </li>
+    
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+
+<script>
+    
+    
+    function abreFecha(elemento) {
+        let ex = document.getElementById(elemento)
+        if (ex.style.display == 'none') {
+            ex.style.display = 'block'
+        } else {
+            ex.style.display = 'none'
+        }
+    }
+</script>
