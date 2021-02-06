@@ -1,6 +1,87 @@
-<p>
-    <img src="https://www.viagemegastronomia.com.br/wp-content/uploads/2020/07/MorereBahia-768x1024.jpg"
-    alt='Foto de praia'
-    width='513' height='342'
-    title='Foto de praia'>
-</p>
+<div wm-slider>
+    <p>
+        <img src="https://www.viagemegastronomia.com.br/wp-content/uploads/2020/07/MorereBahia-768x1024.jpg"
+        alt='Foto de praia'
+        width='513' height='342'
+        title='Foto de praia'>
+    </p>
+    
+    <p>
+    
+        <img src="https://www.viagemegastronomia.com.br/wp-content/uploads/2020/07/MorereBahia-768x1024.jpg"
+        alt='Foto de praia'
+        width='513' height='342'
+        title='Foto de praia'>
+    
+    </p>
+    
+    <p class="circular">
+        <img src="https://www.oficinadanet.com.br/imagens/post/24347/330xNxfundo-transparente.jpg.pagespeed.ic.c7297c4891.jpg"
+        alt='Foto de praia'
+        height='342'
+        title='Foto de praia'>
+    </p>
+
+</div>
+
+
+<style>
+    p {
+        position: absolute;
+        display: none;
+        
+    }
+   
+</style>
+
+
+
+<script>
+
+    function mover(elemento, inicio, fim, passo , callback){
+        const novoInicio = inicio - passo
+        if (novoInicio >= fim){
+            elemento.style.left = novoInicio + "px";
+            setTimeout(() => mover(elemento, novoInicio, fim, passo, callback), 8)
+        } else {
+            callback()
+        }
+    }
+
+    function slider() {
+        const elementos = document.querySelectorAll('[wm-slider] > p');
+        const slides = Array.from(elementos)
+        exibirSlides(slides, slides[0])
+    }
+
+    function exibirSlides(slides, slide) {
+        slide.style.display = 'block';
+
+        const inicio = innerWidth;
+        const fim = -slide.clientWidth;
+
+        slide.style.left = `${inicio}px`
+
+        mover(slide, inicio, fim, 5, () => {
+            slide.style.display = 'none';
+            exibirSlides(slides, getProximo(slides, slide))
+        })
+
+        function getProximo(lista, atual){
+            const i = lista.indexOf(atual) + 1
+            return i < lista.length ? lista[i] : lista[0]
+
+        }
+
+    }
+
+    slider()
+
+    
+
+</script>
+
+
+
+
+            
